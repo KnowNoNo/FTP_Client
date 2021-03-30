@@ -1,0 +1,589 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""res\\HH_FTPClient.rc2""  // 非 Microsoft Visual C++ 编辑的资源\r\n"
+    "#include ""l.CHS\\afxres.rc""          // 标准组件\r\n"
+    "#include ""l.CHS\\afxprint.rc""        // 打印/打印预览资源\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\HH_FTPClient.ico"
+IDR_HH_FTPClientTYPE    ICON                    "res\\HH_FTPClientDoc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BACK_BITMAP         BITMAP                  "res\\UP1LVL.BMP"
+IDB_FILE_BITMAP         BITMAP                  "res\\file_bit.bmp"
+IDR_TOOLBAR1            BITMAP                  "res\\toolbar1.bmp"
+IDB_LOGO                BITMAP                  "res\\logo.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_TOOLBAR1 TOOLBAR  32, 32
+BEGIN
+    BUTTON      ID_CONNECT
+    BUTTON      ID_DISCONNECT
+    SEPARATOR
+    BUTTON      ID_INFODESK_SHOW
+    BUTTON      ID_TPQUEUE_SHOW
+    BUTTON      ID_SERVER_SHOW
+    SEPARATOR
+    BUTTON      ID_REFRESH
+    SEPARATOR
+    BUTTON      ID_UPLOAD
+    BUTTON      ID_DOWNLOAD
+    SEPARATOR
+    BUTTON      ID_APP_EXIT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "服务器"
+    BEGIN
+        MENUITEM "连接服务器",                       ID_CONNECT
+        MENUITEM "断开服务器",                       ID_DISCONNECT
+        MENUITEM SEPARATOR
+        MENUITEM "创建目录",                        ID_CREATE_SERVER_DIR
+        MENUITEM "删除目录",                        ID_DELETE_SERVER_DIR
+        MENUITEM SEPARATOR
+        MENUITEM "退出(&X)",                      ID_APP_EXIT
+    END
+    POPUP "编辑(&E)"
+    BEGIN
+        MENUITEM "撤消(&U)\tCtrl+Z",              ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "剪切(&T)\tCtrl+X",              ID_EDIT_CUT
+        MENUITEM "复制(&C)\tCtrl+C",              ID_EDIT_COPY
+        MENUITEM "粘贴(&P)\tCtrl+V",              ID_EDIT_PASTE
+    END
+    POPUP "传输"
+    BEGIN
+        MENUITEM "上传",                          ID_UPLOAD
+        MENUITEM "下载",                          ID_DOWNLOAD
+    END
+    POPUP "视图(&V)"
+    BEGIN
+        MENUITEM "刷新",                          ID_REFRESH
+        MENUITEM SEPARATOR
+        MENUITEM "传输日志窗口",                      ID_INFODESK_SHOW
+        MENUITEM "服务器文件窗口",                     ID_SERVER_SHOW
+        MENUITEM "传输队列窗口",                      ID_TPQUEUE_SHOW
+        MENUITEM SEPARATOR
+        MENUITEM "工具栏(&T)",                     ID_VIEW_TOOLBAR
+        MENUITEM "状态栏(&S)",                     ID_VIEW_STATUS_BAR
+    END
+    POPUP "帮助(&H)"
+    BEGIN
+        MENUITEM "关于 HH_FTPClient(&A)...",      ID_APP_ABOUT
+    END
+END
+
+IDR_LOC_SERV_QUEUE_MENU MENU 
+BEGIN
+    POPUP "LOC"
+    BEGIN
+        MENUITEM "上传",                          ID_LOC_SEND
+        MENUITEM SEPARATOR
+        MENUITEM "打开",                          ID_LOC_OPEN
+        MENUITEM "刷新",                          ID_LOC_REFRESH
+        MENUITEM SEPARATOR
+        MENUITEM "删除",                          ID_LOC_DELETE
+    END
+    POPUP "SER"
+    BEGIN
+        MENUITEM "下载",                          ID_SER_DOWNLOAD
+        MENUITEM SEPARATOR
+        MENUITEM "刷新",                          ID_SERVER_SHOW
+        MENUITEM SEPARATOR
+        MENUITEM "创建目录",                        ID_SER_CREAT_DIR
+        MENUITEM "删除空目录或文件",                    ID_SER_DELETE_DIR
+    END
+    POPUP "FAIL_QUEUE"
+    BEGIN
+        MENUITEM "重新上传",                        ID_FAILQUEUE_REUPLOAD
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY 
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 170, 62
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 HH_FTPClient"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         343,IDC_STATIC,"Static",SS_BITMAP,14,19,29,14
+    LTEXT           "HH_FTPClient，1.0 版",IDC_STATIC,49,14,114,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2020",IDC_STATIC,49,27,114,8
+    DEFPUSHBUTTON   "确定",IDOK,113,41,50,14,WS_GROUP
+END
+
+IDR_MAINFRAME DIALOGEX 0, 0, 330, 16
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+END
+
+IDD_DIALOGBAR DIALOGEX 0, 0, 731, 16
+STYLE DS_SETFONT | WS_CHILD
+FONT 9, "宋体", 400, 0, 0x0
+BEGIN
+    LTEXT           "密码：",IDC_STATIC,264,4,33,9
+    LTEXT           "服务器：",IDC_STATIC,3,4,33,9
+    LTEXT           "端口：",IDC_STATIC,347,4,33,9
+    LTEXT           "用户名：",IDC_STATIC,164,4,33,9
+    EDITTEXT        IDC_FTPNAME,35,2,123,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_FTPUSER,199,2,57,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_FTPPASSWORD,290,2,50,14,ES_PASSWORD | ES_AUTOHSCROLL
+    EDITTEXT        IDC_FTPPORT,377,2,40,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "连接",IDC_QUICKCONNECT,568,1,50,14
+    CONTROL         "主动Y/被动N",IDC_ISPORT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,427,2,60,10
+    CONTROL         "重传Y/续传N",IDC_ISFORCE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,501,2,60,10
+    PUSHBUTTON      "断开连接",IDC_DISCONNECT,626,1,50,14
+END
+
+IDD_LOC_FORMVIEW DIALOGEX 0, 0, 221, 151
+STYLE DS_SETFONT | WS_CHILD
+FONT 9, "宋体", 400, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_LOC_LIST,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | LVS_SHAREIMAGELISTS | WS_BORDER | WS_TABSTOP,0,14,221,113,WS_EX_ACCEPTFILES | WS_EX_TRANSPARENT | WS_EX_CLIENTEDGE
+    CONTROL         "",IDC_LOC_DIR,"ComboBoxEx32",CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP,0,1,221,92,WS_EX_ACCEPTFILES | WS_EX_TRANSPARENT
+    LTEXT           "静态",IDC_STATIC_LOCSTATUS,0,127,221,24
+END
+
+IDD_SERV_FORMVIEW DIALOGEX 0, 0, 222, 160
+STYLE DS_SETFONT | WS_CHILD
+FONT 9, "宋体", 400, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_SERV_LIST,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | LVS_SHAREIMAGELISTS | WS_BORDER | WS_TABSTOP,0,16,222,112,WS_EX_TRANSPARENT | WS_EX_CLIENTEDGE
+    PUSHBUTTON      "",IDC_BACK,200,1,20,14,BS_BITMAP
+    CONTROL         "",IDC_SERV_DIR,"ComboBoxEx32",CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP,0,1,199,121
+    LTEXT           "",IDC_STATIC_SERVSTATUS,0,128,221,26
+END
+
+IDD_NEWDIR_DIALOG DIALOGEX 0, 0, 282, 68
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,140,40,58,21
+    PUSHBUTTON      "取消",IDCANCEL,205,40,58,21
+    LTEXT           "请输入创建目录名：",IDC_STATIC,14,10,98,14
+    EDITTEXT        IDC_EDIT1,14,22,249,14,ES_AUTOHSCROLL
+END
+
+IDD_TPInfoView DIALOGEX 0, 0, 311, 163
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 9, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_TAB1,"SysTabControl32",TCS_BOTTOM | TCS_FOCUSNEVER,0,0,304,147
+END
+
+IDD_TAB_DIALOG1 DIALOGEX 0, 0, 316, 183
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | LVS_SORTASCENDING | LVS_SHAREIMAGELISTS | WS_BORDER | WS_TABSTOP,0,0,309,176,WS_EX_ACCEPTFILES | WS_EX_TRANSPARENT | WS_EX_CLIENTEDGE
+END
+
+IDD_DELDIR_DIALOG DIALOGEX 0, 0, 214, 64
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "确定",IDOK,110,42,46,15
+    DEFPUSHBUTTON   "取消",IDCANCEL,161,42,46,15
+    LTEXT           "静态",IDC_STATIC_NAME,20,14,177,18
+    CONTROL         "始终保持此选择",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,47,72,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080403a8"
+        BEGIN
+            VALUE "CompanyName", "河南辉煌科技"
+            VALUE "FileDescription", "FTP客户端"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "HH_FTPClient.exe"
+            VALUE "LegalCopyright", "TODO: (C) <公司名>。保留所有权利。"
+            VALUE "OriginalFilename", "HH_FTPClient.exe"
+            VALUE "ProductName", "TODO: <产品名>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 163
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 55
+    END
+
+    IDD_DIALOGBAR, DIALOG
+    BEGIN
+        RIGHTMARGIN, 729
+        VERTGUIDE, 330
+        VERTGUIDE, 501
+    END
+
+    IDD_LOC_FORMVIEW, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 129
+    END
+
+    IDD_SERV_FORMVIEW, DIALOG
+    BEGIN
+        TOPMARGIN, 1
+        BOTTOMMARGIN, 154
+    END
+
+    IDD_NEWDIR_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 275
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 61
+    END
+
+    IDD_TPInfoView, DIALOG
+    BEGIN
+        RIGHTMARGIN, 304
+        VERTGUIDE, 68
+        BOTTOMMARGIN, 156
+    END
+
+    IDD_TAB_DIALOG1, DIALOG
+    BEGIN
+        RIGHTMARGIN, 309
+        BOTTOMMARGIN, 176
+    END
+
+    IDD_DELDIR_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 207
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 57
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// HTML
+//
+
+IDR_HTML_TPFAILUREDIALOG HTML                    "TPFailureDialog.htm"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDP_OLE_INIT_FAILED     "OLE 初始化失败。请确保 OLE 库是正确的版本。"
+    IDS_STRING_RATE         "当前网络速度："
+    IDS_STRING_QUEUEFILE    "HHKJ"
+    ID_VIEW_DIALOGBAR       "显示或隐藏DIALOGBAR\n切换"
+    IDP_SOCKETS_INIT_FAILED "Windows 套接字初始化失败。"
+END
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "HH_FTPClient\n\nHH_FTPClient\n\n\nHHFTPClient.Document\nHH_FTPClient.Document"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "HH_FTPClient"
+    AFX_IDS_IDLEMESSAGE     "就绪"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_NEW             "创建新文档\n新建"
+    ID_FILE_OPEN            "打开现有文档\n打开"
+    ID_FILE_CLOSE           "关闭活动文档\n关闭"
+    ID_FILE_SAVE            "保存活动文档\n保存"
+    ID_FILE_SAVE_AS         "用新名称保存活动文档\n另存为"
+    ID_FILE_PAGE_SETUP      "更改打印选项\n页面设置"
+    ID_FILE_PRINT_SETUP     "更改打印机选项和打印选项\n打印设置"
+    ID_FILE_PRINT           "打印活动文档\n打印"
+    ID_FILE_PRINT_DIRECT    "使用当前选项打印活动文档\n快速打印"
+    ID_FILE_PRINT_PREVIEW   "显示整页\n打印预览"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "显示程序信息、版本号和版权\n关于"
+    ID_APP_EXIT             "退出应用程序；提示保存文档\n退出"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "打开此文档"
+    ID_FILE_MRU_FILE2       "打开此文档"
+    ID_FILE_MRU_FILE3       "打开此文档"
+    ID_FILE_MRU_FILE4       "打开此文档"
+    ID_FILE_MRU_FILE5       "打开此文档"
+    ID_FILE_MRU_FILE6       "打开此文档"
+    ID_FILE_MRU_FILE7       "打开此文档"
+    ID_FILE_MRU_FILE8       "打开此文档"
+    ID_FILE_MRU_FILE9       "打开此文档"
+    ID_FILE_MRU_FILE10      "打开此文档"
+    ID_FILE_MRU_FILE11      "打开此文档"
+    ID_FILE_MRU_FILE12      "打开此文档"
+    ID_FILE_MRU_FILE13      "打开此文档"
+    ID_FILE_MRU_FILE14      "打开此文档"
+    ID_FILE_MRU_FILE15      "打开此文档"
+    ID_FILE_MRU_FILE16      "打开此文档"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "切换到下一个窗格\n下一窗格"
+    ID_PREV_PANE            "切换回上一个窗格\n上一窗格"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WINDOW_SPLIT         "将活动窗口拆分为多个窗格\n拆分"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "清除选定内容\n清除"
+    ID_EDIT_CLEAR_ALL       "清除全部内容\n全部清除"
+    ID_EDIT_COPY            "复制选定内容并将其放到剪贴板上\n复制"
+    ID_EDIT_CUT             "剪切选定内容并将其放到剪贴板上\n剪切"
+    ID_EDIT_FIND            "查找指定的文本\n查找"
+    ID_EDIT_PASTE           "插入剪贴板内容\n粘贴"
+    ID_EDIT_REPEAT          "重复上一操作\n重复"
+    ID_EDIT_REPLACE         "用其他文本替换特定的文本\n替换"
+    ID_EDIT_SELECT_ALL      "选定整个文档\n全选"
+    ID_EDIT_UNDO            "撤消上一操作\n撤消"
+    ID_EDIT_REDO            "恢复上次撤消的操作\n重做"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "显示或隐藏工具栏\n切换工具栏"
+    ID_VIEW_STATUS_BAR      "显示或隐藏状态栏\n切换状态栏"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "更改窗口大小"
+    AFX_IDS_SCMOVE          "更改窗口位置"
+    AFX_IDS_SCMINIMIZE      "将窗口缩小为图标"
+    AFX_IDS_SCMAXIMIZE      "使窗口最大化显示"
+    AFX_IDS_SCNEXTWINDOW    "切换到下一个文档窗口"
+    AFX_IDS_SCPREVWINDOW    "切换到前一个文档窗口"
+    AFX_IDS_SCCLOSE         "关闭活动窗口并提示保存文档"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "将窗口恢复到正常大小"
+    AFX_IDS_SCTASKLIST      "激活任务列表"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "关闭打印预览模式\n取消预览"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_CONNECT              "连接\n连接服务器"
+    ID_DISCONNECT           "断开\n断开服务器"
+    ID_REFRESH              "刷新\n刷新"
+    ID_INFODESK_SHOW        "显示\n隐藏或显示-传输日志窗口"
+    ID_TPQUEUE_SHOW         "显示\n隐藏或显示-传输文件信息窗口"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_REFRASH              "刷新\n刷新"
+    ID_UPLOAD               "上传\n上传文件"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_SERVER_SHOW          "显示\n隐藏或显示-服务器窗口"
+    ID_DOWNLOAD             "上传\n下载文件"
+END
+
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\HH_FTPClient.rc2"  // 非 Microsoft Visual C++ 编辑的资源
+#include "l.CHS\afxres.rc"          // 标准组件
+#include "l.CHS\afxprint.rc"        // 打印/打印预览资源
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
